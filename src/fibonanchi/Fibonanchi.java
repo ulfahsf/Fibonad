@@ -19,7 +19,8 @@ public class Fibonanchi {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int x=sc.nextInt();
-        deret(x);
+//        deret(x);
+        total(x);
     }
     private static int fibbonaci(int x){
         if(x>1){
@@ -27,10 +28,19 @@ public class Fibonanchi {
         }
         return x;
     }
+    
+    private static void total(int x){
+        int total = 0;
+        for (int i = 1; i <= x; i++) {
+            total+=fibbonaci(i);
+        }
+        System.out.println(total);
+    }
 
     private static void deret(int x){
         for (int i = 1; i <= x; i++) {
             System.out.print(fibbonaci(i)+" ");
+            
         }
     }
 }
